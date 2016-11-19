@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Kims</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kims.each do |kim| %>
+      <tr>
+        <td><%= kim.name %></td>
+        <td><%= kim.description %></td>
+        <td><%= kim.picture %></td>
+        <td><%= link_to 'Show', kim %></td>
+        <td><%= link_to 'Edit', edit_kim_path(kim) %></td>
+        <td><%= link_to 'Destroy', kim, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kim', new_kim_path %>

@@ -1,0 +1,1 @@
+json.array! @kims, partial: 'kims/kim', as: :kim

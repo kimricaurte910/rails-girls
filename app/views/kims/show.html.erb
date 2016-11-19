@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @kim.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @kim.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @kim.picture %>
+</p>
+
+<%= link_to 'Edit', edit_kim_path(@kim) %> |
+<%= link_to 'Back', kims_path %>
